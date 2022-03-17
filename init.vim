@@ -65,12 +65,13 @@ nnoremap <F5> :call Runprog()<CR>
 imap <F5> <ESC><F5>
 
 " key mapping for buffers
-nnoremap <C-h> :bp<CR>
-nnoremap <C-l> :bn<CR>
-nnoremap <C-n> :enew<CR>
-nnoremap <C-d> :bd<CR>
-nnoremap <Leader>b :ls<cr>:buffer<space>
-imap <C-h> <ESC><C-h>
-imap <C-l> <ESC><C-l>
-imap <C-n> <ESC><C-n>
-imap <C-d> <ESC><C-d>
+nnoremap <Leader>b :ls<CR>:buffer<Space>
+augroup switch_buffer
+  autocmd!
+  autocmd BufReadPost,BufNewFile * nnoremap <buffer> <C-h> :bp<CR>
+  autocmd BufReadPost,BufNewFile * nnoremap <buffer> <C-l> :bn<CR>
+  autocmd BufReadPost,BufNewFile * nnoremap <buffer> <C-d> :bd<CR>
+  autocmd BufReadPost,BufNewFile * imap <buffer> <C-h> <ESC><C-h>
+  autocmd BufReadPost,BufNewFile * imap <buffer> <C-l> <ESC><C-l>
+  autocmd BufReadPost,BufNewFile * imap <buffer> <C-d> <ESC><C-d>
+augroup END
