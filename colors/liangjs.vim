@@ -23,7 +23,7 @@ hi Include ctermfg=116 ctermbg=NONE cterm=NONE
 "hi TabLineSel -- no settings --
 hi StatusLineNC ctermfg=8 ctermbg=232 cterm=NONE
 "hi CTagsMember -- no settings --
-hi NonText ctermfg=250 ctermbg=0 cterm=NONE
+hi NonText ctermfg=250 ctermbg=233 cterm=NONE
 "hi CTagsGlobalConstant -- no settings --
 hi DiffText gui=bold,italic ctermfg=NONE ctermbg=239 cterm=bold
 hi ErrorMsg ctermfg=197 ctermbg=235 cterm=bold
@@ -37,7 +37,7 @@ hi StorageClass ctermfg=208 ctermbg=NONE cterm=NONE
 hi Todo ctermfg=15 ctermbg=235 cterm=bold
 hi LineNr ctermfg=250 ctermbg=234 cterm=NONE
 hi StatusLine ctermfg=240 ctermbg=230 cterm=NONE
-hi Normal ctermfg=15 ctermbg=0 cterm=NONE
+hi Normal ctermfg=15 ctermbg=232 cterm=NONE
 hi Label ctermfg=185 ctermbg=NONE cterm=bold
 "hi CTagsImport -- no settings --
 hi PMenuSel ctermfg=NONE ctermbg=8 cterm=NONE
