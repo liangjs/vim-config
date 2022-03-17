@@ -23,8 +23,11 @@ set fileencodings=ucs-bom,utf-8,gb2312,latin1
 set ignorecase      " case insensitive search
 set smartcase       " switch to case-sensitive search on capital letters
 
+set splitbelow      " new window at bottom
+set splitright      " new window on the right
+
 " copy to system clipboard
-vmap <C-C> "+y
+vmap <C-c> "+y
 
 augroup terminal
   autocmd!
@@ -36,8 +39,11 @@ augroup terminal
   autocmd TermOpen * setlocal nolist
 augroup END
 
+nnoremap <C-t> :split term://$SHELL<CR>
+imap <C-t> <ESC><C-t>
+
 " exit terminal mode
-tmap <Esc> <C-\><C-n>
+tnoremap <Esc> <C-\><C-n>
 
 " remember last file position
 autocmd BufReadPost * ++once
@@ -48,10 +54,23 @@ colorscheme liangjs
 
 set autowrite       " auto save
 
+" build program
 runtime compile.vim
-imap <F9> <ESC>:call Compile()<CR>
-nmap <F9> :call Compile()<CR>
+nnoremap <F9> :call Compile()<CR>
+imap <F9> <ESC><F9>
 
+" run program
 runtime runprog.vim
-imap <F5> <ESC>:call Runprog()<CR>
-nmap <F5> :call Runprog()<CR>
+nnoremap <F5> :call Runprog()<CR>
+imap <F5> <ESC><F5>
+
+" key mapping for buffers
+nnoremap <C-h> :bp<CR>
+nnoremap <C-l> :bn<CR>
+nnoremap <C-n> :enew<CR>
+nnoremap <C-d> :bd<CR>
+nnoremap <Leader>b :ls<cr>:buffer<space>
+imap <C-h> <ESC><C-h>
+imap <C-l> <ESC><C-l>
+imap <C-n> <ESC><C-n>
+imap <C-d> <ESC><C-d>
