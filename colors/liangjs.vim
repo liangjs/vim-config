@@ -43,7 +43,7 @@ hi Label ctermfg=185 ctermbg=NONE cterm=bold
 hi PMenuSel ctermfg=NONE ctermbg=8 cterm=NONE
 hi Search ctermfg=15 ctermbg=240 cterm=NONE
 "hi CTagsGlobalVariable -- no settings --
-hi Delimiter ctermfg=242 ctermbg=NONE cterm=NONE
+hi link Delimiter Operator
 "hi SpellRare -- no settings --
 "hi EnumerationValue -- no settings --
 hi Comment ctermfg=242 ctermbg=NONE cterm=NONE
@@ -77,7 +77,7 @@ hi SpecialKey ctermfg=81 ctermbg=NONE cterm=NONE
 hi Constant ctermfg=141 ctermbg=NONE cterm=bold
 "hi DefinedName -- no settings --
 hi Tag ctermfg=197 ctermbg=NONE cterm=NONE
-hi String ctermfg=134 ctermbg=NONE cterm=NONE
+hi String ctermfg=166 ctermbg=NONE cterm=NONE
 hi PMenuThumb ctermfg=81 ctermbg=NONE cterm=NONE
 hi MatchParen ctermfg=0 ctermbg=250 cterm=bold
 "hi LocalVariable -- no settings --
