@@ -20,3 +20,7 @@ function Runprog()
   let cmd = s:get_command()
   exec "term " .. cmd
 endfunc
+
+function Debug()
+  exec "term gdb %:p:r"
+endfunc
