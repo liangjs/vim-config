@@ -64,6 +64,10 @@ runtime runprog.vim
 nnoremap <F5> :call Runprog()<CR>
 imap <F5> <ESC><F5>
 
+" debug program
+nnoremap <F7> :call Debug()<CR>
+imap <F7> <ESC><F7>
+
 " key mapping for buffers
 nnoremap <Leader>b :ls<CR>:buffer<Space>
 nnoremap <C-h> :bp<CR>

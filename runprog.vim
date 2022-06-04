@@ -1,10 +1,10 @@
 let s:commands = {
-      \   "sh": "bash %",
-      \   "python": "python %",
-      \   "lua": "lua %",
+      \   "sh": "bash \"%\"",
+      \   "python": "python \"%\"",
+      \   "lua": "lua \"%\"",
       \ }
 
-let s:default = "%:p:r"
+let s:default = "\"%:p:r\""
 
 function s:get_command()
   for [key, cmd] in items(s:commands)
@@ -19,4 +19,8 @@ function Runprog()
   exec "w"
   let cmd = s:get_command()
   exec "term " .. cmd
+endfunc
+
+function Debug()
+  exec "term gdb \"%:p:r\""
 endfunc
