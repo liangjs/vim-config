@@ -47,7 +47,7 @@ local on_attach = function(client, bufnr)
 end
 
 -- setup lsp servers
-local servers = { 'pyright', 'rust_analyzer', 'clangd' }
+local servers = { 'pyright', 'rust_analyzer', 'clangd', 'texlab' }
 for _, lsp in pairs(servers) do
   require('lspconfig')[lsp].setup {
     on_attach = on_attach,
