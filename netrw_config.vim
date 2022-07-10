@@ -11,4 +11,4 @@ let g:netrw_keepdir = 0
 autocmd FileType netrw setlocal bufhidden=wipe
 set nohidden
 
-nnoremap <Leader>e :Explore<CR>
+"nnoremap <Leader>e :Explore<CR>

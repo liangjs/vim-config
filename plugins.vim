@@ -9,14 +9,20 @@ Plug 'vim-scripts/a.vim'
 " fancy status bar
 Plug 'vim-airline/vim-airline'
 
-" themes of vim-airline
+" fuzzey finder
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+
+" color themes
 Plug 'vim-airline/vim-airline-themes'
+Plug 'sainnhe/sonokai'
 
 " AST highlight
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-
-" show treesitter information
 Plug 'nvim-treesitter/playground'
+
+" show indentation level
+Plug 'Yggdroot/indentLine'
 
 " language server protocol
 Plug 'neovim/nvim-lspconfig'
@@ -31,11 +37,9 @@ call plug#end()
 
 
 runtime airline_config.vim
+runtime netrw_config.vim
+runtime fzf_config.vim
 
 lua require("treesitter_config")
-
-runtime netrw_config.vim
-
 lua require("lsp_config")
-
 lua require("cmp_config")
