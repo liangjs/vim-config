@@ -60,6 +60,7 @@ autocmd BufReadPost * ++once
 
 set cursorline      " highlight current line
 let g:sonokai_style = 'shusia'
+let g:sonokai_transparent_background = 1
 colorscheme sonokai
 
 set autoread        " auto reload if file changes
