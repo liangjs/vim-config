@@ -1,6 +1,12 @@
 runtime plugins.vim
 
 set number          " show line number
+" set relative line number for focused buffer
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,WinEnter * if &number | set relativenumber   | endif
+  autocmd BufLeave,FocusLost,WinLeave   * if &number | set norelativenumber | endif
+augroup END
 
 set mouse=a         " enable mouse usage (all modes)
 
@@ -11,6 +17,9 @@ set shiftwidth=2    " width for autoindents
 set autoindent      " indent a new line the same amount as the line just typed
 set smarttab        " <Tab> in front of a line inserts many blanks
 set cindent         " automatic C program indenting
+
+" indentation of special file types
+autocmd Filetype Makefile set noexpandtab
 
 set linebreak       " don't break at words
 let &showbreak='↪ ' " to be shown at start of wrapped lines
@@ -53,9 +62,12 @@ autocmd BufReadPost * ++once
       \ if &ft !~# 'commit\|rebase' && line("'\"") > 1 && line("'\"") <= line("$") | exe 'normal! g`"' | endif
 
 set cursorline      " highlight current line
-colorscheme liangjs
+let g:sonokai_style = 'shusia'
+let g:sonokai_transparent_background = 1
+colorscheme sonokai
 
-set autowrite       " auto save
+set autoread        " auto reload if file changes
+set autowrite       " auto save on :make
 
 " build program
 runtime compile.vim
@@ -72,10 +84,10 @@ nnoremap <F7> :call Debug()<CR>
 imap <F7> <ESC><F7>
 
 " key mapping for buffers
-nnoremap <Leader>b :ls<CR>:buffer<Space>
+"nnoremap <Leader>b :ls<CR>:buffer<Space>
 nnoremap <C-h> :bp<CR>
 nnoremap <C-l> :bn<CR>
-nnoremap <C-d> :bd<CR>
+"nnoremap <C-d> :bd<CR>
 imap <C-h> <ESC><C-h>
 imap <C-l> <ESC><C-l>
-imap <C-d> <ESC><C-d>
+"imap <C-d> <ESC><C-d>
