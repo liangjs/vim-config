@@ -15,8 +15,8 @@ set softtabstop=2   " see multiple spaces as tabstops so <BS> does the right thi
 set expandtab       " converts tabs to white space
 set shiftwidth=2    " width for autoindents
 set autoindent      " indent a new line the same amount as the line just typed
-set smarttab        " <Tab> in front of a line inserts many blanks
-set cindent         " automatic C program indenting
+"set smarttab        " <Tab> in front of a line inserts many blanks
+"set cindent         " automatic C program indenting
 
 " indentation of special file types
 autocmd Filetype Makefile set noexpandtab
