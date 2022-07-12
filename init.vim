@@ -26,6 +26,9 @@ set smartcase       " switch to case-sensitive search on capital letters
 set splitbelow      " new window at bottom
 set splitright      " new window on the right
 
+" highlight .tex files
+let g:tex_flavor = "latex"
+
 " copy to system clipboard
 vmap <C-c> "+y
 
