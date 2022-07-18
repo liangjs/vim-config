@@ -33,6 +33,9 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 
+" startup time
+Plug 'dstein64/vim-startuptime'
+
 call plug#end()
 
 
