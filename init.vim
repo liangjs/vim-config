@@ -19,7 +19,7 @@ set autoindent      " indent a new line the same amount as the line just typed
 "set cindent         " automatic C program indenting
 
 " indentation of special file types
-autocmd Filetype Makefile set noexpandtab
+"autocmd Filetype Makefile set noexpandtab
 
 set linebreak       " don't break at words
 let &showbreak='↪ ' " to be shown at start of wrapped lines

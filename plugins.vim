@@ -42,6 +42,7 @@ call plug#end()
 runtime airline_config.vim
 runtime netrw_config.vim
 runtime fzf_config.vim
+runtime indentline_config.vim
 
 lua require("treesitter_config")
 lua require("lsp_config")
