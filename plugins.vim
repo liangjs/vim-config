@@ -36,6 +36,9 @@ Plug 'hrsh7th/vim-vsnip'
 " startup time
 Plug 'dstein64/vim-startuptime'
 
+" languages
+Plug 'tomlion/vim-solidity'
+
 call plug#end()
 
 

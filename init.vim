@@ -2,11 +2,11 @@ runtime plugins.vim
 
 set number          " show line number
 " set relative line number for focused buffer
-augroup numbertoggle
-  autocmd!
-  autocmd BufEnter,FocusGained,WinEnter * if &number | set relativenumber   | endif
-  autocmd BufLeave,FocusLost,WinLeave   * if &number | set norelativenumber | endif
-augroup END
+" augroup numbertoggle
+"   autocmd!
+"   autocmd BufEnter,FocusGained,WinEnter * if &number | set relativenumber   | endif
+"   autocmd BufLeave,FocusLost,WinLeave   * if &number | set norelativenumber | endif
+" augroup END
 
 set mouse=a         " enable mouse usage (all modes)
 
