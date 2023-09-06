@@ -93,3 +93,7 @@ nnoremap <C-l> :bn<CR>
 imap <C-h> <ESC><C-h>
 imap <C-l> <ESC><C-l>
 "imap <C-d> <ESC><C-d>
+
+" code completion
+set completeopt-=preview  " no popup preview window
+imap <C-o> <C-x><C-o>
