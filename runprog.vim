@@ -2,6 +2,7 @@ let s:commands = {
       \   "sh": "bash \"%\"",
       \   "python": "python \"%\"",
       \   "lua": "lua \"%\"",
+      \   "javascript": "node \"%\"",
       \ }
 
 let s:default = "\"%:p:r\""

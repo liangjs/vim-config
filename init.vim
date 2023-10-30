@@ -97,3 +97,6 @@ imap <C-l> <ESC><C-l>
 " code completion
 set completeopt-=preview  " no popup preview window
 imap <C-o> <C-x><C-o>
+
+" support different file types
+runtime file_types.vim
