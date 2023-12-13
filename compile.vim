@@ -3,6 +3,7 @@ let s:commands = {
       \   "ninja": "ninja",
       \   "c": "gcc % -o %< -g -lm",
       \   "c++": "g++ % -o %< -g",
+      \   "haskell": "ghc -dynamic % -o %< -g",
       \ }
 
 let s:detections = {
@@ -10,6 +11,7 @@ let s:detections = {
       \   "ninja": ["fs", ["build.ninja"]],
       \   "c": ["ft", ["c"]],
       \   "c++": ["ft", ["cpp", "cc", "cxx"]],
+      \   "haskell": ["ft", ["haskell", "hs"]],
       \ }
 
 let s:fs_level = 3

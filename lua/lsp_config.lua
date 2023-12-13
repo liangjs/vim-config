@@ -32,7 +32,10 @@ end
 lspconfig = require("lspconfig")
 lspconfig.pyright.setup{}
 lspconfig.rust_analyzer.setup{}
-lspconfig.clangd.setup{}
+lspconfig.clangd.setup{
+  filetypes = { "c", "cpp", "objc", "objcpp", "cuda"}
+}
+lspconfig.hls.setup{}
 
 -- global mappings
 vim.keymap.set('n', '<space>d', vim.diagnostic.open_float)
