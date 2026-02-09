@@ -36,6 +36,7 @@ lspconfig.clangd.setup{
   filetypes = { "c", "cpp", "objc", "objcpp", "cuda"}
 }
 lspconfig.hls.setup{}
+lspconfig.ts_ls.setup{}
 
 -- global mappings
 vim.keymap.set('n', '<space>d', vim.diagnostic.open_float)
