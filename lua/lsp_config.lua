@@ -29,14 +29,15 @@ function _G.toggle_diagnostic_window()
 end
 
 -- setup lsp servers
-lspconfig = require("lspconfig")
-lspconfig.pyright.setup{}
-lspconfig.rust_analyzer.setup{}
-lspconfig.clangd.setup{
-  filetypes = { "c", "cpp", "objc", "objcpp", "cuda"}
-}
-lspconfig.hls.setup{}
-lspconfig.ts_ls.setup{}
+vim.lsp.config("clangd", {
+  filetypes = { "c", "cpp", "objc", "objcpp", "cuda"},
+})
+
+vim.lsp.enable("pyright")
+vim.lsp.enable("rust_analyzer")
+vim.lsp.enable("clangd")
+vim.lsp.enable("hls")
+vim.lsp.enable("ts_ls")
 
 -- global mappings
 vim.keymap.set('n', '<space>d', vim.diagnostic.open_float)

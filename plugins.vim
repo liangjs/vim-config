@@ -17,10 +17,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'sainnhe/sonokai'
 
-" AST highlight
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'nvim-treesitter/playground'
-
 " show indentation level
 Plug 'Yggdroot/indentLine'
 
@@ -47,6 +43,5 @@ runtime netrw_config.vim
 runtime fzf_config.vim
 runtime indentline_config.vim
 
-lua require("treesitter_config")
 lua require("lsp_config")
 lua require("cmp_config")
